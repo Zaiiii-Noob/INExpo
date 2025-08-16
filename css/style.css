@@ -1,0 +1,146 @@
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body {
+  font-family: "Work Sans", system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  color:#111;
+  font-size: 16px;
+}
+img { max-width: 100%; height: auto; display:block; }
+
+/* ====== BAR NAVIGASI ====== */
+header nav {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  min-height: 64px;
+}
+#logo { width: 64px; height:auto; }
+
+nav > div {                 /* link */
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+nav a {
+  color:#111;
+  text-decoration:none;
+  padding: 8px 10px;
+  border-radius:8px;
+}
+nav a:hover { background:#f2f2f2; }
+
+/* ====== SECTION: HOME ====== */
+#home {
+  position: relative;
+  min-height: clamp(260px, 40vh, 420px);
+  display:flex;
+  align-items:center;
+  padding: 24px 16px;
+  color: #fff;
+  isolation: isolate;
+  background-image: url("../assets/building.png"); /* path relatif dari /css */
+  background-size: cover;
+  background-position: center;
+}
+/* overlay foto */
+#home::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35));
+  z-index:-1;
+}
+#home h1 { margin:0 0 6px; font-size: clamp(20px, 3.2vw, 32px); }
+#home p { margin:0; font-size: clamp(14px, 2.2vw, 16px); }
+
+
+/* grid gambar kota */
+.headquarters-content {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin-inline:auto;
+}
+.headquarters-content > div { display:grid; place-items:center; gap:10px; }
+.headquarters-content img {
+  width: 110px; aspect-ratio:1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #2563eb; /* biru */
+}
+
+/* ====== MESSAGE US ====== */
+#message {
+  background: #f5fbff;
+  padding: 28px 16px;
+}
+
+#message > div:first-child > h2,
+#message > div:first-child > p { margin-top:0; }
+
+#message .form-and-output{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin-inline:auto;
+}
+
+/* Sentrifikasi/penjajaran form desktop */
+@media (min-width: 900px) {
+  #message .form-and-output { grid-template-columns: 1.2fr .8fr; }
+}
+
+/* Kendali */
+form#messageForm { display:grid; gap: 12px; }
+form#messageForm label { display:inline-block; margin-bottom:6px; }
+form#messageForm input[type="text"],
+form#messageForm input[type="date"],
+form#messageForm textarea {
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  font:inherit;
+  background:#fff;
+}
+form#messageForm textarea { min-height:110px; resize: vertical; }
+form#messageForm button[type="submit"]{
+  padding:12px 16px; border:0; border-radius:10px;
+  background:#111; color:#fff; cursor:pointer;
+}
+form#messageForm button:hover{ opacity:.9; }
+
+/* Identitas */
+#identity {
+  border:1px solid #e5e7eb;
+  background:#fff;
+  border-radius:12px;
+  padding:16px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align:center;
+  padding: 18px 16px;
+  border-top: 1px solid #eee;
+  color:#444;
+}
+
+@media (max-width: 420px){
+  #logo{ width:52px; }
+  nav a{ padding:6px 8px; }
+}
+
+#profile {
+  padding: 28px 16px;
+  text-align:center;
+  background-color: #f2f2f2;
+}
+
+#profile h1, #profile p:first-child {
+  font-weight:700; margin:0 0 12px;
+}
