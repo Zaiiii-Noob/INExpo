@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav aria-label="Main">
+      <img src="assets/logo.png" alt="Logo" id="logo" style="width:80px" />
+      <div>
+        <a href="index.html">Home</a>
+        <a href="#profile">Our Profile</a>
+        <a href="#message">Message Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home">
+      <div>
+        <h1 id="welcomeTitle" style="font-size:larger">
+          Selamat datang, <span id="NamaPengunjung" style="font-style:italic">Visitor</span> Selamat Datang di Webpage INExpo
+        </h1>
+        <p style="font-size:small">Suatu project yang menunjang minat bakat siswa siswi indonesia</p>
+      </div>
+    </section>
+
+    <section id="profile">
+      <h1 style="font-weight:bold">Our Profile</h1>
+      <p>Kami adalah sebuah startup yang bermimpi untuk memudahkan akses pembelajaran siswa dan siswi diseluruh penjuru nusantara didapat dengan layak dan baik tek terhalang oleh jurusannya.</p>
+      <p>Kami sadar bahwa sistem belajar apalagi penjurusan kini menjadi tantangan para siswa dan mahasiswa di seluruh dunia, kini kami akan mencoba menyelesaikan masalah tersebut dengan startup ini!</p>
+      <h3 id="vision">📌 Vision</h3>
+      <p>Visi kami memberikan fasilitas dan ilmu yang layak bagi siswa dan mahasiswa yang masih mencari jati dirinya.</p>
+      <h3 id="mission">📌 Mission</h3>
+      <p>1. Memberikan fasilitas serta pengelaman berkualitas tinggi.</p>
+      <p>2. Menghapus seluk beluk penjurusan yang dapat menjerumuskan pelajar.</p>
+      <p>3. Memberikan ruang untuk berekspresi.</p>
+      <p>4. Mendukung kebutuhan para siswa dan siswi untuk berprestasi di bidang yang diminati.</p>
+      <p>5. Membuat kepercayaan industri pada lulusan pelajar antar-jurusan maupun calon pelajar jurusan yang dituju.</p>
+    </section>
+
+
+    <!-- MESSAGE US -->
+    <section id="message">
+        <div class="form-and-output">
+            <div>
+                <h2>Message Us</h2>
+                <form id="messageForm">
+                <div>
+                    <label for="name">Nama :</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div>
+                    <label for="tglLahir">Tanggal Lahir :</label>
+                    <input type="date" id="tglLahir" name="tglLahir" />
+                </div>
+
+                <div>
+                    <span>Jenis Kelamin :</span>
+                    <input type="radio" id="cowo" name="sex" value="Laki-Laki" />
+                    <label for="cowo">Pria</label>
+                    <input type="radio" id="cewe" name="sex" value="Perempuan" />
+                    <label for="cewe">Wanita</label>
+                </div>
+
+                <div>
+                    <label for="komentar">Komentar :</label><br />
+                    <textarea id="komentar" name="komentar" rows="4" cols="40"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Kirim</button>
+                </div>
+                </form>
+            </div>
+
+            <div>
+                <h2>Identitasmu</h2>
+                <div id="Indentitas">
+                <p>Name: <span id="name1">Visitor</span></p>
+                <p>Tanggal Lahir: <span id="tglLahir1">-</span></p>
+                <p>Jenis Kelamin: <span id="sex1">-</span></p>
+                <p>Komentar: <span id="komentar1">-</span></p>
+                </div>
+            </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ahmad Zaidan At Thahir, MOS. 2025.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
